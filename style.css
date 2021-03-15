@@ -1,0 +1,28 @@
+#canvas{
+    display: block;
+    position: fixed;
+    border: 1px solid black;
+    
+    top: 50px;
+    left: 50px;
+}
+
+#knight {
+    display: block;
+    position: relative;
+    width: 70px;
+    
+    top: 218px;
+    left: 75px;
+}
+
+.card {
+    display: block;
+    position: absolute;
+    left: 180px;
+    top: 230px;
+}
+
+#knight-title {
+    opacity: 0;
+}
