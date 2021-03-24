@@ -98,6 +98,7 @@ a:hover {
 
     display: flex;
     flex-flow: row nowrap;
+    /* justify-content: space-between; */
 }
 
 .spacer {
@@ -110,7 +111,9 @@ a:hover {
 .game-content {
     width: 70%;
     padding: 100px 50px;
+
     align-self: flex-end;
+    flex-grow: 10;
 
     background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
 }
