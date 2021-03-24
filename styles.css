@@ -1,0 +1,251 @@
+/* 
+Aglet Mono
+    font-family: aglet-mono;
+
+    font-weights:
+        regular: 400
+        semibold: 600
+        bold: 700
+
+Mono45 Headline
+    font-family: mono45-headline;
+    font-weight: 700;
+
+ADD BACKUP FONTS?
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: aglet-mono;
+    color: white;
+
+    scroll-behavior: smooth;
+}
+
+.overlay {
+    display: none;
+    z-index: 5;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+}
+
+@media (max-width: 900px) {
+    .overlay {
+        display: block;
+    }
+}
+
+.collection-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.games-list-container {
+    position: fixed;
+    height: 100vh;
+    width: 30%;
+    max-width: 420px;
+    min-width: 300px;
+    
+    padding: 50px;
+
+    background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,0));
+}
+
+.games-list {
+    list-style-type: none;
+}
+
+.games-list > * {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+.games-index {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+
+    scroll-snap-type: y mandatory;
+}
+
+.game {
+    width: 100vw;
+    height: 100vh;
+
+    scroll-snap-align: start;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.spacer {
+    width: 30%;
+    max-width: 420px;
+
+    background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
+}
+
+.game-content {
+    width: 70%;
+    padding: 100px 50px;
+    align-self: flex-end;
+
+    background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
+}
+
+@media (min-width: calc(420px / .3)) {
+    .game-content {
+        width: auto;
+    }
+    .spacer {
+        width: 100%;
+    }
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: mono45-headline;
+    font-size: 6rem;
+    line-height: 5rem;
+}
+
+.tag-container {
+    margin: 30px -5px 40px -5px;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tag {
+    margin: 5px 5px;
+    padding: 7px 12px;
+
+    font-weight: 700;
+
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.tag-xbox-360, .tag-xbox-one {
+    background-color: #309251;
+}
+
+.tag-ps3, .tag-ps4, .tag-ps-vita {
+    background-color: #2B4EA9;
+}
+
+.tag-switch, .tag-wii-u, .tag-3ds {
+    background-color: #DB5C5C;
+}
+
+.tag-windows, .tag-macOS, .tag-linux {
+    background-color: #484848;
+}
+
+.tag-ios, .tag-android {
+    background-color: rgb(86, 103, 40);
+}
+
+.game-description > * {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.game-1 {
+    background-image: url("media/hollow-knight.jpeg");
+    background-color: #121d31;
+    /* INSERT SHADOW COLOR AS BACKUP BG COLOR? */
+}
+
+.game-2 {
+    background-image: url("media/ori-and-the-blind-forest.jpeg");
+    background-color: rgb(25, 111, 74);
+}
+
+.game-3 {
+    background-image: url("media/guacamelee.png");
+}
+
+.game-4 {
+    background-image: url("media/steamworld-dig-2.png");
+}
+
+.game-5 {
+    background-image: url("media/axiom-verge.png");
+}
+
+.game-6 {
+    background-image: url("media/dead-cells.jpg");
+}
+
+.game-7 {
+    background-image: url("media/owlboy.png");
+}
+
+.game-8 {
+    background-color: rgb(69, 119, 212);
+}
+
+.game-9 {
+    background-color: rgb(69, 212, 145);
+}
+
+.game-10 {
+    background-color: rgb(212, 69, 176);
+}
+
+.game-11 {
+    background-color: rgb(202, 212, 69);
+}
+
+.game-12 {
+    background-color: rgb(90, 69, 212);
+}
+
+.game-13 {
+    background-color: rgb(212, 69, 69);
+}
+
+.game-14 {
+    background-color: rgb(69, 190, 212);
+}
+
+.game-15 {
+    background-color: rgb(167, 69, 212);
+}
+
+.game-16 {
+    background-color: rgb(152, 212, 69);
+}
+
+.game-17 {
+    background-color: rgb(69, 143, 212);
+}
