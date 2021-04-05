@@ -26,6 +26,103 @@ ADD BACKUP FONTS?
     scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+}
+
+.question-slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+
+    background-position: 50% 50%;
+    background-size: 200% 200%;
+}
+
+.question-slide-one, .question-slide-two, .question-slide-three, .question-slide-four {
+    position: absolute;
+
+    transition: all .2s ease-in-out;
+}
+
+.question-slide-one {
+    background-image: linear-gradient(to right, rgb(47, 68, 255), rgb(54, 168, 196), rgb(227, 191, 51), rgb(255, 133, 20));
+}
+
+.question-slide-two {
+    background-image: linear-gradient(to right, rgb(47, 68, 255), rgb(54, 168, 196), rgb(227, 191, 51), rgb(255, 133, 20));
+}
+
+.left-0 {
+    left: 0;
+}
+
+.top-0 {
+    top: 0;
+}
+
+.left-100vw {
+    left: 100vw;
+}
+
+.right-100vw {
+    right: 100vw;
+}
+
+.menu, .question, .answers {
+    width: 100%;
+}
+
+.menu {
+    padding: 30px 50px;
+}
+
+.menu-item {
+    margin: 15px 0;
+    text-decoration: underline;
+}
+
+.question {
+    height: 70vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.answers {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding: 50px;
+}
+
+.answer {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-family: mono45-headline;
+    font-size: 5rem;
+    text-align: center;
+
+    min-width: 300px;
+    width: 50%;
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.ellipsis {
+    letter-spacing: -20px;
+}
+
 .overlay {
     display: none;
     z-index: 5;

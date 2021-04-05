@@ -9,298 +9,39 @@
     <!-- stylesheet -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
 
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
     <!-- Adobe Fonts -->
     <link rel="stylesheet" href="https://use.typekit.net/mxz8lnh.css">
 </head>
 
 <body>
-    <!-- Overlay for a screen too small -->
-    <div class="overlay">
-        <h2>screen too small<br>:(</h2>
-    </div>
-
-    <div class="collection-container">
-
-        <!-- The running list of games on the left side of the screen that stays in position regardless of scroll -->
-        <div class="games-list-container">
-            <ul class="games-list">
-                <li><a href="#hollow-knight">Hollow Knight</a></li>
-                <li><a href="#ori-and-the-blind-forest">Ori and the Blind Forest</a></li>
-                <li><a href="#guacamelee">Guacamelee!</a></li>
-                <li><a href="#steamworld-dig-2">Steamworld Dig 2</a></li>
-                <li><a href="#axiom-verge">Axiom Verge</a></li>
-                <li><a href="#dead-cells">Dead Cells</a></li>
-                <li><a href="#owlboy">Owlboy</a></li>
-                <li><a href="#iconoclasts">Iconoclasts</a></li>
-                <li><a href="#chasm">Chasm</a></li>
-                <li><a href="#shantae-riskys-revenge">Shantae: Risky's Revenge</a></li>
-                <li><a href="#supraland">Supraland</a></li>
-                <li><a href="#phoenotopia-awakening">Phoenotopia: Awakening</a></li>
-                <li><a href="#a-robot-named-fight">A Robot Named Fight</a></li>
-                <li><a href="#timespinner">Timespinner</a></li>
-                <li><a href="#salt-and-sanctuary">Salt & Sanctuary</a></li>
-                <li><a href="#bloodstained-ritual-of-the-night">Bloodstained: Ritual of the Night</a></li>
-                <li><a href="#vigil-the-longest-night">Vigil: The Longest Night</a></li>
-            </ul>
+    <div class="entry-sequence">
+        <div class="question-slide question-slide-one left-0 top-0">
+            <div class="menu">
+                <p class="menu-item"><a href="">About this project</a></p>
+                <p class="menu-item"><a href="index2.html">Skip to game list</a></p>
+            </div>
+            <div class="question">
+                <h1>I like to play games that<span class="ellipsis">...</span></h1>
+            </div>
+            <div class="answers">
+                <p class="answer answer-a question-one-answer-a">Tell a good story</p>
+                <p class="answer answer-b question-one-answer-b">Challenge me</p>
+            </div>
         </div>
-
-        <!-- The flow of games on the right side of the screen that changes on scroll -->
-        <div class="games-index">
-            <section class="game game-1" id="hollow-knight">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Team Cherry</strong>, 2017</h3>
-                    <h2>Hollow Knight</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>Beneath the fading town of Dirtmouth sleeps a vast, ancient kingdom. Many are drawn beneath the surface, searching for riches, or glory, or answers to old secrets.</p>
-                        <p>The player enters the once-prosperous now-bleak insect kingdom of Hallownest, travels through its various districts, meets friendly inhabitants, fights hostile ones and uncovers the kingdom's history while improving their combat abilities and movement arsenal by fighting bosses and accessing out-of-the-way areas.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-2" id="ori-and-the-blind-forest">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Moon Studios</strong>, 2015</h3>
-                    <h2>Ori and the Blind Forest</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span>
-                    </div>
-                    <div class="game-description">
-                        <p>The forest of Nibel is dying. After a powerful storm sets a series of devastating events in motion, an unlikely hero must journey to find his courage and confront a dark nemesis to save his home.</p>
-                        <p>Featuring hand-painted artwork, meticulously animated character performance, and a fully orchestrated score, Ori and the Blind Forest explores a deeply emotional story about love and sacrifice, and the hope that exists in us all.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-3" id="guacamelee">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>DrinkBox Studios</strong>, 2013</h3>
-                    <h2>Guacamelee!</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-360">Xbox 360</span><span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps3">PS3</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-wii-u">Wii U</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>Set in and around a small village in Mexico, Guacamelee! is an action-packed, 2D brawler/platformer that alternates between the worlds of the living and the dead. Inspired by Mexican folklore, players take control of a down-on-his luck wrestler named Juan Aguacate, as he fights through hordes of undead enemies and skeleton henchmen to stop the evil Carlos Calaca from gaining ultimate power by sacrificing the beautiful "El Presidente's Daughter”.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-4" id="steamworld-dig-2">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Image & Form</strong>, 2017</h3>
-                    <h2>Steamworld Dig 2</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-wii-u">Wii U</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-5" id="axiom-verge">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Thomas Happ</strong>, 2015</h3>
-                    <h2>Axiom Verge</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-3ds">3DS</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-6" id="dead-cells">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Motion Twin</strong>, 2018</h3>
-                    <h2>Dead Cells</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span><span class="tag tag-ios">iOS</span><span class="tag tag-android">Android</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-7" id="owlboy">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>D-Pad Studio</strong>, 2016</h3>
-                    <h2>Owlboy</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-3ds">3DS</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-8" id="iconoclasts">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Konjak</strong>, 2018</h3>
-                    <h2>Iconoclasts</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-3ds">3DS</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-9" id="chasm">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Bit Kid, Inc.</strong>, 2018</h3>
-                    <h2>Chasm</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-3ds">3DS</span><span class="tag tag-windows">Windows</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-10" id="shantae-riskys-revenge">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>WayForward Technologies</strong>, 2010</h3>
-                    <h2>Shantae: Risky's Revenge</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-wii-u">Wii U</span><span class="tag tag-windows">Windows</span><span class="tag tag-ios">iOS</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-11" id="supraland">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Supra Games</strong>, 2019</h3>
-                    <h2>Supraland</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-12" id="phoenotopia-awakening">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Cape Cosmic</strong>, 2020</h3>
-                    <h2>Phoenotopia: Awakening</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-13" id="a-robot-named-fight">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Morningstar Game Studio</strong>, 2017</h3>
-                    <h2>A Robot Named Fight</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-14" id="timespinner">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Lunar Ray Games</strong>, 2018</h3>
-                    <h2>Timespinner</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-15" id="salt-and-sanctuary">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Ska Studios</strong>, 2016</h3>
-                    <h2>Salt & Sanctuary</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-ps4">PS4</span><span class="tag tag-ps-vita">PS Vita</span><span class="tag tag-switch">Switch</span><span class="tag tag-wii-u">Wii U</span><span class="tag tag-windows">Windows</span><span class="tag tag-macOS">macOS</span><span class="tag tag-linux">Linux</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-16" id="bloodstained-ritual-of-the-night">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>ArtPlay</strong>, 2019</h3>
-                    <h2>Bloodstained: Ritual of the Night</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span><span class="tag tag-ios">iOS</span><span class="tag tag-android">Android</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="game game-17" id="vigil-the-longest-night">
-                <div class="spacer"></div>
-                <div class="game-content">
-                    <h3><strong>Glass Heart Games</strong>, 2020</h3>
-                    <h2>Vigil: The Longest Night</h2>
-                    <div class="tag-container">
-                        <span class="tag tag-xbox-one">Xbox One</span><span class="tag tag-ps4">PS4</span><span class="tag tag-switch">Switch</span><span class="tag tag-windows">Windows</span>
-                    </div>
-                    <div class="game-description">
-                        <p>xxx</p>
-                        <p>xxx</p>
-                    </div>
-                </div>
-            </section>
+        <!-- <div class="question-slide question-slide-two left-100vw top-0">
+        <div class="menu">
+            <p class="menu-item"><a href="">About this project</a></p>
+            <p class="menu-item"><a href="">Skip to game list</a></p>
         </div>
-
+        <div class="question"><h1>In most games, I like to<span class="ellipsis">...</span></h1></div>
+        <div class="answers">
+            <p class="answer-a">Fight</p>
+            <p class="answer-b">Explore</p>
+        </div>
+    </div> -->
     </div>
 </body>
 
