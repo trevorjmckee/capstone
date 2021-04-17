@@ -2,6 +2,16 @@
 //     setTimeout(() => {console.log("1 second has passed"); }, 3000);
 // }
 
+$(document).ready(function() {
+    // $(".part-two-container").click(function() {
+    //     $(this).fadeOut();
+    // });
+
+    $("button").click(function() {
+        $(".game-section-container").load("hollow-knight.txt");
+    });
+})
+
 function transitionStarter() {
     // text
     let elemOne = document.getElementsByClassName("question");
@@ -221,6 +231,9 @@ let isNavOneOn = true;
 function pressNavMain() {
     elemOne = document.getElementsByClassName("nav");
     elemOne[0].classList.toggle("nav-transition");
+
+    elemTwo = document.getElementsByClassName("game-container");
+    elemTwo[0].classList.toggle("game-container-transition");
 }
 
 function pressNavToggle() {

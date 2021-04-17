@@ -299,6 +299,15 @@ body {
 }
 
 /* INDEX STYLING */
+.part-two-container {
+    /* display: flex; */
+    /* flex-flow: row nowrap; */
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .nav {
     position: relative;
     width: 100vw;
@@ -381,7 +390,7 @@ body {
 .nav-game {
     font-family: mono45-headline;
     font-weight: 500;
-    font-size: 4rem;
+    font-size: 5rem;
 
     position: absolute;
     top: 50%;
@@ -556,4 +565,100 @@ body {
     width: 11px;
     height: 11px;
     margin: 6px;
+}
+
+.game-container {
+    position: relative;
+    top: -100vh;
+    left: 100vw;
+
+    width: calc(100vw - 100px);
+    height: 100vh;
+
+    transition: all 1s ease-in-out;
+}
+
+.game-container-transition {
+    left: 100px;
+}
+
+.game-section-container{
+    width: 100%;
+    max-width: 1300px;
+    /* height: 100%; */
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 50px 100px;
+}
+
+iframe {
+    margin-bottom: 100px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: mono45-headline;
+    font-size: 6rem;
+    line-height: 5rem;
+}
+
+.tag-container {
+    margin: 30px -5px 40px -5px;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tag-container  a {
+    text-decoration: none;
+}
+
+.tag {
+    margin: 5px 5px;
+    padding: 7px 12px;
+
+    font-weight: 700;
+
+    border: 1px solid black;
+    border-radius: 4px;
+
+    transition: all .3s ease-in-out;
+}
+
+.tag:hover {
+    border: 1px solid white;
+}
+
+.tag-xbox-360, .tag-xbox-one {
+    background-color: #309251;
+}
+
+.tag-ps3, .tag-ps4, .tag-ps-vita {
+    background-color: #2B4EA9;
+}
+
+.tag-switch, .tag-wii-u, .tag-3ds {
+    background-color: #DB5C5C;
+}
+
+.tag-windows, .tag-macOS, .tag-linux {
+    background-color: #484848;
+}
+
+.tag-ios, .tag-android {
+    background-color: rgb(86, 103, 40);
+}
+
+.game-description > * {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
 }
