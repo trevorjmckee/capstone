@@ -6,9 +6,9 @@
 
 <span id="guacamelee">Guacamelee!</span>
 
-<span id="steamworld-dig-2">Steamworld-Dig-2</span>
+<span id="steamworld-dig-2">Steamworld Dig 2</span>
 
-<span id="axiom-verge">Axiom Verge
+<span id="axiom-verge">Axiom Verge</span>
 
 <span id="dead-cells">Dead Cells</span>
 

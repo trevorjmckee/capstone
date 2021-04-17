@@ -363,6 +363,10 @@ body {
     background-position: 0 0;
 }
 
+.nav-type-one-gradient-top-inactive {
+    top: -50vh;
+}
+
 .nav-type-one-gradient-bottom {
     position: absolute;
     width: 100%;
@@ -381,6 +385,10 @@ body {
 
 .nav-type-one-gradient-bottom:hover {
     background-position: 0 0;;
+}
+
+.nav-type-one-gradient-bottom-inactive {
+    bottom: -50vh;
 }
 
 .nav-adjacent-entries-container {
