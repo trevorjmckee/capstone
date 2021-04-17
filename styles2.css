@@ -335,6 +335,50 @@ body {
     /* display: none; */
 }
 
+.nav-type-one-gradients {
+    position: absolute;
+    width: calc(100vw - 100px);
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.nav-type-one-gradient-top {
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    top: 0;
+
+    background:
+        linear-gradient(to bottom, rgba(255, 47, 210, 1), rgba(255, 47, 210, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(47, 68, 255, 1) 20%, rgba(47, 68, 255, 0)) no-repeat;
+    background-position: 0 -50vh;
+
+    transition: all .6s ease-in-out;
+}
+
+.nav-type-one-gradient-top:hover {
+    background-position: 0 0;;
+}
+
+.nav-type-one-gradient-bottom {
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    bottom: 0;
+
+    background:
+        linear-gradient(to top, rgba(48, 128, 146, 1), rgba(48, 128, 146, 0)) no-repeat,
+        linear-gradient(to top, rgba(20, 255, 156, 1), rgba(20, 255, 156, 0)) no-repeat;
+    background-position: 0 50vh;
+
+    transition: all .6s ease-in-out;
+}
+
+.nav-type-one-gradient-bottom:hover {
+    background-position: 0 0;;
+}
+
 .nav-adjacent-entries-container {
     position: relative;
     width: 30%;
