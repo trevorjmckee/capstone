@@ -548,7 +548,7 @@ body {
 }
 
 .nav-controls-main:hover img {
-    transform: rotate(0) translateX(-50%);
+    transform: rotate(0) translateX(-55%);
 }
 
 .nav-controls-main {
