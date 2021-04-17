@@ -4,6 +4,6 @@ $(document).ready(function() {
     // });
 
     $("button").click(function() {
-        $(".game-section-container").load("hollow-knight.txt #hollow-knight");
+        $(".game-section-container").load("game-content.txt #hollow-knight");
     });
 })
