@@ -429,6 +429,8 @@ body {
 .nav-game-container {
     position: relative;
     width: 100%;
+
+    pointer-events: none;
 }
 
 .nav-game {
