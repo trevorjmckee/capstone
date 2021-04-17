@@ -2,16 +2,6 @@
 //     setTimeout(() => {console.log("1 second has passed"); }, 3000);
 // }
 
-$(document).ready(function() {
-    // $(".part-two-container").click(function() {
-    //     $(this).fadeOut();
-    // });
-
-    $("button").click(function() {
-        $(".game-section-container").load("hollow-knight.txt #hollow-knight");
-    });
-})
-
 function transitionStarter() {
     // text
     let elemOne = document.getElementsByClassName("question");
