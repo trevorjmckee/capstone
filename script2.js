@@ -216,35 +216,65 @@ function answerFourShow() {
 }
 
 let isNavOneOn = true;
+let isNavOpen = true;
 
 // INDEX NAVIGATION !!!
 function pressNavMain() {
-    elemOne = document.getElementsByClassName("nav");
-    elemOne[0].classList.toggle("nav-transition");
+    if (isNavOpen) {
+        elemOne = document.getElementsByClassName("nav");
+        elemOne[0].classList.toggle("nav-transition");
 
-    elemTwo = document.getElementsByClassName("game-container");
-    elemTwo[0].classList.toggle("game-container-transition");
+        elemTwo = document.getElementsByClassName("game-container");
+        elemTwo[0].classList.toggle("game-container-transition");
+
+        isNavOpen = false;
+
+        if (!isNavOneOn) {
+            fadeNavTwo();
+            setTimeout(() => switchDisplays(), 1300);
+            setTimeout(() => fadeNavOne(), 1500);
+            isNavOneOn = true;
+        }
+    } else {
+        elemOne = document.getElementsByClassName("nav");
+        elemOne[0].classList.toggle("nav-transition");
+
+        elemTwo = document.getElementsByClassName("game-container");
+        elemTwo[0].classList.toggle("game-container-transition");
+
+        isNavOpen = true;
+    }
 }
 
 function pressNavToggle() {
     // if nav is open, toggle nav type
-    // if type one is on, turn off and turn on type two
-    if (isNavOneOn) {
+    if (isNavOpen) {
+        // if type one is on, turn off and turn on type two
+        if (isNavOneOn) {
+            fadeNavOne();
+            setTimeout(() => switchDisplays(), 1000);
+            setTimeout(() => fadeNavTwo(), 1200);
+            isNavOneOn = false;
+        } else { // if type two is on, turn off and turn on type one
+            fadeNavTwo();
+            setTimeout(() => switchDisplays(), 1300);
+            setTimeout(() => fadeNavOne(), 1500);
+            isNavOneOn = true;
+        }
+    } else { // if nav is not open, open it and set to nav-type-two
+        elemOne = document.getElementsByClassName("nav");
+        elemOne[0].classList.toggle("nav-transition");
+
+        elemTwo = document.getElementsByClassName("game-container");
+        elemTwo[0].classList.toggle("game-container-transition");
+
+        isNavOpen = true;
+
         fadeNavOne();
         setTimeout(() => switchDisplays(), 1000);
         setTimeout(() => fadeNavTwo(), 1200);
         isNavOneOn = false;
-    } else {
-        fadeNavTwo();
-        setTimeout(() => switchDisplays(), 1300);
-        setTimeout(() => fadeNavOne(), 1500);
-        isNavOneOn = true;
     }
-    // fadeInNavTwo();
-
-    // if type two is one, turn off and turn type one
-
-    // if nav is not open, open it and set to nav-type-two
 }
 
 function fadeNavOne() {
@@ -272,7 +302,10 @@ function fadeNavTwo() {
 
     let elemTwo = document.getElementsByClassName("nav-list");
     elemTwo[0].classList.toggle("nav-list-transition");
-    setTimeout(function() {elemTwo[1].classList.toggle("nav-list-transition"); }, 300);
+    setTimeout(function () { elemTwo[1].classList.toggle("nav-list-transition"); }, 300);
+
+    let elemThree = document.getElementsByClassName("li-0-container");
+    elemThree[0].classList.toggle("li-0-container-transition");
 
     // let elemTwo = document.getElementsByClassName("list-item");
     // for (i = 0; i < elemTwo.length; i++) {

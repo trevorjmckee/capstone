@@ -486,7 +486,7 @@ body {
 }
 
 .nav-type-two-line {
-    margin-bottom: 90px;
+    margin-bottom: 55px;
     width: 0;
     opacity: 0;
 
@@ -496,6 +496,30 @@ body {
 .nav-type-two-line-transition {
     width: 100%;
     opacity: 1;
+}
+
+.li-0-container {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+
+    margin-bottom: 45px;
+
+    transition: all 1s ease-in-out;
+}
+
+.li-0-container-transition {
+    top: 0;
+    opacity: 1;
+}
+
+.li-0 {
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+}
+
+.li-0:hover {
+    font-weight: 900;
 }
 
 .list-container {
@@ -525,11 +549,11 @@ body {
 
 .nav-list > li {
     color: rgb(220, 220, 220);
+    cursor: pointer;
 }
 
 .nav-list > li:hover {
     font-weight: 900;
-    cursor: pointer;
 }
 
 /* .list-item {
@@ -712,8 +736,12 @@ h2 {
     background-color: #484848;
 }
 
-.tag-ios, .tag-android {
-    background-color: rgb(86, 103, 40);
+.tag-ios {
+    background-color: rgb(29, 122, 222);
+}
+
+.tag-android {
+    background-color: rgb(65, 168, 111);
 }
 
 .game-description > * {
