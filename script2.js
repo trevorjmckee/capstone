@@ -45,6 +45,7 @@ function answerA() {
         answerFour();
         i++;
     } else if (i == 4) {
+        window.location.href = "index4.html";
         answerFive();
     }
 }
@@ -63,6 +64,7 @@ function answerB() {
         answerFour();
         i++;
     } else if (i == 4) {
+        window.location.href = "index4.html";
         answerFive();
     }
 }
