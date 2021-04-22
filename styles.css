@@ -1,19 +1,3 @@
-/* 
-Aglet Mono
-    font-family: aglet-mono;
-
-    font-weights:
-        regular: 400
-        semibold: 600
-        bold: 700
-
-Mono45 Headline
-    font-family: mono45-headline;
-    font-weight: 700;
-
-ADD BACKUP FONTS?
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -21,236 +5,566 @@ ADD BACKUP FONTS?
     box-sizing: border-box;
 
     font-family: aglet-mono;
+    font-weight: 400;
     color: white;
 
     scroll-behavior: smooth;
 }
 
 body {
-    position: relative;
+    background-color: black;
 }
 
-.entry-sequence {
-    z-index: -1;
-
-    position: fixed;
+.entry-container {
+    position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
 
+    background-color: black;
     overflow: hidden;
 }
 
-.question-slide {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-    display: flex;
-    flex-flow: row wrap;
-    align-items: stretch;
-
-    background-position: 50% 50%;
-    background-size: 200% 200%;
-}
-
-.question-slide-one, .question-slide-two, .question-slide-three, .question-slide-four {
+.gradient {
     position: absolute;
-
-    transition: all .3s ease-in-out;
-}
-
-.question-slide-one {
-    background-image: linear-gradient(to right, rgb(47, 68, 255), rgb(54, 168, 196), rgb(227, 191, 51), rgb(255, 133, 20));
-}
-
-.question-slide-two {
-    background-image: linear-gradient(to right, rgb(255, 0, 0), rgb(196, 54, 120), rgb(51, 77, 227), rgb(48, 146, 81));
-}
-
-.question-slide-three {
-    background-image: linear-gradient(to right, rgb(255, 230, 0), rgb(40, 120, 28), rgb(51, 77, 227), rgb(83, 8, 102));
-}
-
-.question-slide-four {
-    background-image: linear-gradient(to right, rgb(0, 255, 229), rgb(28, 120, 63), rgb(209, 227, 51), rgb(255, 123, 0));
-}
-
-.translate-left-100vw {
-    transform: translate(-100vw);
-}
-
-.translate-right-100vw {
-    transform: translate(100vw);
-}
-
-.translate-up-100vw {
-    transform: translate(0, -100vh);
-}
-
-.translate-down-100vw {
-    transform: translate(0, 100vh);
-}
-
-.question, .answers {
     width: 100%;
+    height: 45%;
+    background-repeat: no-repeat;
+
+    z-index: 1;
+    /* THIS IS THE THING THAT I TURNED FROM 1 TO 0 TO ALLOW TO HOVER OVER THE QUESTION MARK!!!! */
+
+    transition: all .6s ease-in-out;
 }
 
-.menu {
-    position: fixed;
+.gradient:hover {
+    cursor: pointer;
+}
+
+.gradient-one {
     top: 0;
-    left: 0;
-    display: block;
-    padding: 30px 50px;
+    background-position: 0 -50vh;
 }
 
-.menu-item {
-    margin: 15px 0;
-    text-decoration: underline;
+.gradient-one:hover {
+    background-position: 0 0;
 }
 
-.question {
-    height: 85vh;
+.gradient-one-a {
+    background:
+        linear-gradient(to bottom, rgba(255, 47, 210, 1), rgba(255, 47, 210, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(47, 68, 255, 1) 20%, rgba(47, 68, 255, 0)) no-repeat;
+    background-position: 0 -50vh;
+}
+
+.gradient-one-b {
+    background:
+        linear-gradient(to bottom, rgba(47, 68, 255, 1), rgba(47, 68, 255, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(128, 0, 255, 1), rgba(128, 0, 255, 0)) no-repeat;
+    background-position: 0 -50vh;
+}
+
+.gradient-one-c {
+    background:
+        linear-gradient(to bottom, rgba(220, 0, 0, 1), rgba(220, 0, 0, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(250, 0, 255, 1), rgba(250, 0, 255, 0)) no-repeat;
+    background-position: 0 -50vh;
+}
+
+.gradient-one-d {
+    background:
+        linear-gradient(to bottom, rgba(255, 234, 47, 1), rgba(255, 234, 47, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(255, 61, 0, 1), rgba(255, 61, 0, 0)) no-repeat;
+    background-position: 0 -50vh;
+}
+
+.gradient-one-e {
+    background:
+        linear-gradient(to bottom, rgba(255, 47, 234, 1), rgba(255, 47, 234, 0)) no-repeat,
+        linear-gradient(to bottom, rgba(128, 0, 255, 1), rgba(128, 0, 255, 0)) no-repeat;
+    background-position: 0 -50vh;
+}
+
+.gradient-two {
+    bottom: 0;
+    background-position: 0 50vh;
+}
+
+.gradient-two:hover {
+    background-position: 0 0;
+}
+
+.gradient-two-a {
+    background:
+        linear-gradient(to top, rgba(48, 128, 146, 1), rgba(48, 128, 146, 0)) no-repeat,
+        linear-gradient(to top, rgba(20, 255, 156, 1), rgba(20, 255, 156, 0)) no-repeat;
+    background-position: 0 50vh;
+}
+
+.gradient-two-b {
+    background:
+        linear-gradient(to top, rgba(209, 0, 0, 1), rgba(209, 0, 0, 0)) no-repeat,
+        linear-gradient(to top, rgba(255, 133, 20, 1), rgba(255, 133, 20, 0)) no-repeat;
+    background-position: 0 50vh;
+}
+
+.gradient-two-c {
+    background:
+        linear-gradient(to top, rgba(0, 224, 103, 1), rgba(0, 224, 103, 0)) no-repeat,
+        linear-gradient(to top, rgba(0, 187, 176, 1), rgba(0, 187, 176, 0)) no-repeat;
+    background-position: 0 50vh;
+}
+
+.gradient-two-d {
+    background:
+        linear-gradient(to top, rgba(173, 15, 199, 1), rgba(173, 15, 199, 0)) no-repeat,
+        linear-gradient(to top, rgba(255, 0, 77, 1), rgba(255, 0, 77, 0)) no-repeat;
+    background-position: 0 50vh;
+}
+
+.gradient-two-e {
+    background:
+        linear-gradient(to top, rgba(20, 255, 227, 1), rgba(20, 255, 227, 0)) no-repeat,
+        linear-gradient(to top, rgba(0, 58, 209, 1), rgba(0, 58, 209, 0)) no-repeat;
+    background-position: 0 50vh;
+}
+
+.entry-content-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row nowrap;
+}
+
+.answer-container {
+    position: relative;
+    width: 30%;
+    min-width: 400px;
+    max-width: 600px;
+
+    pointer-events: none;
 }
 
 .answers {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 
-    align-self: flex-end;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 
     padding: 50px;
 }
 
 .answer {
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    text-align: right;
+
     font-size: 1.5rem;
+
+    transition: all .5s ease-in-out;
 }
 
-.answer:hover {
-    font-weight: bold;
-    cursor: pointer;
+.answer-a {
+    opacity: 0;
+    top: -50px;
 }
 
-h1 {
+.answer-a-show {
+    opacity: 1;
+    top: 0;
+}
+
+.answer-b {
+    align-self: flex-end;
+    opacity: 0;
+    top: 100px;
+}
+
+.answer-b-show {
+    opacity: 1;
+    top: 0;
+}
+
+.question-container {
+    position: relative;
+    width: 100%;
+
+    padding: 100px;
+}
+
+.vertical-line {
+    position: absolute;
+
+    height: 0;
+    width: .1px;
+
+    border-right: 2px white solid;
+
+    left: 100px;
+    top: 50%;
+    transform: translateY(-105px);
+
+    transition: all .5s ease-in-out;
+}
+
+.vertical-line-active {
+    height: 210px;
+}
+
+.question {
     font-family: mono45-headline;
-    font-size: 5rem;
-    text-align: center;
+    font-weight: 500;
+    font-size: 4rem;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -60px;
 
     min-width: 300px;
-    width: 50%;
-    max-width: 700px;
+    max-width: 450px;
 
-    margin: auto;
+    opacity: 0;
+
+    transition: all .8s ease-in-out;
+}
+
+.question-show {
+    opacity: 1;
+    left: 150px;
+}
+
+.question-hide {
+    opacity: 0;
+    left: 300px;
+}
+
+.info {
+    position: absolute;
+    top: 90px;
+    left: 344px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+
+    background-color: white;
+    z-index: 3;
+}
+
+/* .popup {
+    position: relative;
+    width: 300px;
+    font-size: .8rem;
+    z-index: 4;
+
+    opacity: 0;
+    left: -80px;
+    bottom: 150px;
+
+    background-color: white;
+    padding: 20px;
+    color: black;
+
+    transition: all .3s ease-in-out;
+}
+
+.info:hover .popup {
+    opacity: 1;
+    bottom: 200px;
+}
+
+.popup > a {
+    color: black;
+} */
+
+.info-mark {
+    position: absolute;
+    z-index: 4;
+
+    color: black;
+    font-size: .8rem;
+    font-weight: 900;
+
+    left: 4px;
+    top: -32px;
 }
 
 .ellipsis {
     letter-spacing: -20px;
 }
 
-.overlay {
-    display: none;
-    z-index: 5;
-
-    position: fixed;
-    top: 0;
-    left: 0;
+/* INDEX STYLING */
+.part-two-container {
+    /* display: flex; */
+    /* flex-flow: row nowrap; */
+    display: block;
     width: 100vw;
     height: 100vh;
-
-    background-color: black;
+    overflow: hidden;
 }
 
-@media (max-width: 900px) {
-    .overlay {
-        display: block;
-    }
-}
+.nav {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
 
-.collection-container {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-between;
+
+    transition: all 1s ease-in-out;
 }
 
-.games-list-container {
-    position: fixed;
-    height: 100vh;
-    width: 30%;
-    max-width: 420px;
-    min-width: 300px;
-    
+.nav-transition {
+    left: calc(-100% + 100px);
+}
+
+.project-description {
+    position: relative;
     padding: 50px;
-
-    background-image: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,0));
+    /* overflow: scroll; */
 }
 
-.games-list {
-    list-style-type: none;
+.project-description-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.games-list > * {
-    margin-bottom: 20px;
+h1 {
+    font-family: mono45-headline;
+    font-size: 6rem;
+    line-height: 5rem;
+    margin-bottom: 50px;
 }
 
-a {
+.tag-answer {
+    margin: 5px 5px;
+    padding: 7px 12px;
+
+    font-weight: 700;
+
+    border-radius: 4px;
+}
+
+.tag-story {
+    background-color: #2F44FF;
+}
+
+.tag-challenge {
+
+}
+
+.tag-fight {
+    background-color: #DC0000;
+}
+
+.tag-explore {
+
+}
+
+.project-description p {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.list-container {
+    background-color: rgb(20,20,20);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+
+    width: 20%;
+    min-width: 480px;
+    /* overflow: scroll; */
+}
+
+.nav-list {
+    position: relative;
+    list-style: none;
+    line-height: 2.5rem;
+
+    top: 50%;
+    transform: translateY(-50%);
+    /* border: 1px white solid; */
+    margin: auto;
+    padding: 80px;
+
+    width: 100%;
+    /* width: 20%;
+    min-width: 480px; */
+}
+
+.nav-list a {
     text-decoration: none;
 }
 
-a:hover {
-    font-weight: 700;
+.nav-list a li {
+    /* color: rgb(220, 220, 220); */
+    cursor: pointer;
 }
 
-.games-index {
-    width: 100vw;
-    height: 100vh;
-    overflow-y: scroll;
+.nav-list a:hover li {
+    font-weight: 900;
+}
 
+.tag-top-pick {
+    position: relative;
+    font-size: .7rem;
+    padding: 2px 5px;
+    border: 1px solid white;
+    margin-left: 15px;
+    top: -2px;
+
+    background-color: white;
+    color: black;
+}
+
+.nav-controls-container {
+    width: 100px;
+    min-width: 100px;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, rgba(34,34,34, 1), rgba(34,34,34, .5));
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.nav-controls-container img {
+    transition: all .3s ease-in-out;
+}
+
+.nav-controls-main:hover img {
+    transform: rotate(0) translateX(-55%);
+}
+
+.nav-controls-main {
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+}
+
+.nav-controls-main > img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: rotate(-180deg) translate(40%);
+}
+
+.game-container {
+    position: relative;
+    top: -100vh;
+    left: 100vw;
+
+    width: calc(100vw - 100px);
+    height: 100vh;
+
+    transition: all 1s ease-in-out;
+    overflow: scroll;
     scroll-snap-type: y mandatory;
 }
 
+.game-container-transition {
+    left: 100px;
+}
+
 .game {
-    width: 100vw;
+    position: relative;
     height: 100vh;
+    width: 100%;
+    /* max-width: 1300px; */
+    padding: 50px 100px;
+    overflow: scroll;
 
     scroll-snap-align: start;
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
     display: flex;
-    flex-flow: row nowrap;
-    /* justify-content: space-between; */
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: center;
 }
 
-.spacer {
-    width: 30%;
-    max-width: 420px;
-
-    background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
+#ori-and-the-blind-forest {
+    background-image: linear-gradient(to bottom, rgb(45, 90, 133), rgba(52, 75, 70, 0.3));
 }
 
-.game-content {
-    width: 70%;
-    padding: 100px 50px;
-
-    align-self: flex-end;
-    flex-grow: 10;
-
-    background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,0));
+#hollow-knight {
+    background-image: linear-gradient(to bottom, rgb(61, 47, 61), rgba(34, 25, 68, 0.3));
 }
 
-@media (min-width: calc(420px / .3)) {
-    .game-content {
-        width: auto;
-    }
-    .spacer {
-        width: 100%;
-    }
+#guacamelee {
+    background-image: linear-gradient(to bottom, rgb(136, 140, 92), rgba(68, 82, 69, 0.3));
+}
+
+#steamworld-dig-2 {
+    background-image: linear-gradient(to bottom, rgb(189, 124, 67), rgba(54, 56, 43, 0.3));
+}
+
+#axiom-verge {
+    background-image: linear-gradient(to bottom, rgb(102, 16, 83), rgba(46, 36, 36, 0.3));
+}
+
+#dead-cells {
+    background-image: linear-gradient(to bottom, rgb(16, 82, 102), rgba(102, 16, 88, 0.5));
+}
+
+#owlboy {
+    background-image: linear-gradient(to bottom, rgb(32, 95, 59), rgba(32, 50, 95, 0.5));
+}
+
+#iconoclasts {
+    background-image: linear-gradient(to bottom, rgb(94, 56, 109), rgba(94, 56, 109, .3));
+}
+
+#chasm {
+    background-image: linear-gradient(to bottom, rgb(210, 119, 149), rgba(82, 113, 116, 0.5));
+}
+
+#shantae-riskys-revenge {
+    background-image: linear-gradient(to bottom, rgb(112, 32, 32), rgba(112, 80, 32, 0.3));
+}
+
+#supraland {
+    background-image: linear-gradient(to bottom, rgb(70, 26, 57), rgba(55, 19, 46, 0.3));
+}
+
+#phoenotopia-awakening {
+    background-image: linear-gradient(to bottom, rgb(39, 72, 107), rgba(73, 32, 112, 0.3));
+}
+
+#a-robot-named-fight {
+    background-image: linear-gradient(to bottom, rgb(160, 47, 77), rgba(140, 14, 14, 0.3));
+}
+
+#timespinner {
+    background-image: linear-gradient(to bottom, rgb(68, 42, 77), rgba(43, 37, 78, 0.3));
+}
+
+#salt-and-sanctuary {
+    background-image: linear-gradient(to bottom, rgb(53, 53, 57), rgba(59, 55, 62, 0.3));
+}
+
+#bloodstained-ritual-of-the-night {
+    background-image: linear-gradient(to bottom, rgb(58, 31, 31), rgba(78, 37, 70, 0.3));
+}
+
+#vigil-the-longest-night {
+    background-image: linear-gradient(to bottom, rgb(68, 42, 77), rgba(43, 37, 78, 0.3));
+}
+
+iframe {
+    margin-bottom: 100px;
+    box-shadow: 0 20px 30px 0 rgba(0,0,0,.2);
 }
 
 h3 {
@@ -264,13 +578,20 @@ h2 {
     font-family: mono45-headline;
     font-size: 6rem;
     line-height: 5rem;
+
+    max-width: 1100px;
 }
 
 .tag-container {
+    max-width: 1100px;
     margin: 30px -5px 40px -5px;
 
     display: flex;
     flex-flow: row wrap;
+}
+
+.tag-container  a {
+    text-decoration: none;
 }
 
 .tag {
@@ -281,6 +602,12 @@ h2 {
 
     border: 1px solid black;
     border-radius: 4px;
+
+    transition: all .3s ease-in-out;
+}
+
+.tag:hover {
+    border: 1px solid white;
 }
 
 .tag-xbox-360, .tag-xbox-one {
@@ -299,86 +626,16 @@ h2 {
     background-color: #484848;
 }
 
-.tag-ios, .tag-android {
-    background-color: rgb(86, 103, 40);
+.tag-ios {
+    background-color: rgb(29, 122, 222);
+}
+
+.tag-android {
+    background-color: rgb(65, 168, 111);
 }
 
 .game-description > * {
     font-size: 1.3rem;
     margin-bottom: 15px;
-}
-
-.game-0 {
-    background-color: rgb(69, 119, 212);
-}
-
-.game-1 {
-    background-image: url("media/ori-and-the-blind-forest.jpeg");
-    background-color: rgb(25, 111, 74);
-    /* INSERT SHADOW COLOR AS BACKUP BG COLOR? */
-}
-
-.game-2 {
-    background-image: url("media/hollow-knight.jpeg");
-    background-color: #121d31;
-}
-
-.game-3 {
-    background-image: url("media/guacamelee.png");
-}
-
-.game-4 {
-    background-image: url("media/steamworld-dig-2.png");
-}
-
-.game-5 {
-    background-image: url("media/axiom-verge.png");
-}
-
-.game-6 {
-    background-image: url("media/dead-cells.jpg");
-}
-
-.game-7 {
-    background-image: url("media/owlboy.png");
-}
-
-.game-8 {
-    background-color: rgb(69, 119, 212);
-}
-
-.game-9 {
-    background-color: rgb(69, 212, 145);
-}
-
-.game-10 {
-    background-color: rgb(212, 69, 176);
-}
-
-.game-11 {
-    background-color: rgb(202, 212, 69);
-}
-
-.game-12 {
-    background-color: rgb(90, 69, 212);
-}
-
-.game-13 {
-    background-color: rgb(212, 69, 69);
-}
-
-.game-14 {
-    background-color: rgb(69, 190, 212);
-}
-
-.game-15 {
-    background-color: rgb(167, 69, 212);
-}
-
-.game-16 {
-    background-color: rgb(152, 212, 69);
-}
-
-.game-17 {
-    background-color: rgb(69, 143, 212);
+    max-width: 1100px;
 }

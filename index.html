@@ -16,84 +16,53 @@
     <link rel="stylesheet" href="https://use.typekit.net/mxz8lnh.css">
 </head>
 
-<body>
-    <div class="menu">
-        <p class="menu-item"><a href="">About this project</a></p>
-        <p class="menu-item"><a href="index2.html">Skip to game list</a></p>
-    </div>
-    <div class="entry-sequence">
+<body onload="transitionStarter()">
 
-        <!-- question slide ONE -->
-        <div class="question-slide question-slide-one">
-            <div class="question">
-                <h1>I like to play games that<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-one-answer-a" onclick="q1aa()">Tell a good story</p>
-                <p class="answer answer-b question-one-answer-b" onclick="q1ab()">Challenge me</p>
-            </div>
-        </div>
+    <div class="entry-container">
+        <!-- gradients -->
+        <div class="gradient gradient-one" onclick="answerA()"></div>
+        <div class="gradient gradient-two" onclick="answerB()"></div>
 
-        <!-- question slides TWO -->
-        <div class="question-slide question-slide-two question-slide-two-a translate-left-100vw">
-            <div class="question">
-                <h1>In most games, I like to<span class="ellipsis">...</span></h1>
+        <!-- content -->
+        <div class="entry-content-container">
+            <!-- questions -->
+            <div class="question-container">
+                <div class="vertical-line"></div>
+                <h2 class="question">Find a<br>Metroidvania<a href="https://en.wikipedia.org/wiki/Metroidvania" target="_blank" class="info">
+                    <!-- <div class="popup">Metroidvania is a genre of video games characterized by an interconnected world that the player can freely traverse, often circling back to places they have already been with new tools or abilities.<br><br><a href="https://en.wikipedia.org/wiki/Metroidvania" target="_blank">Wikipedia</a></div> -->
+                    <span class="info-mark">?</span></a><br>to play</h2>
+                <h2 class="question">I like to play games that<span class="ellipsis">...</span></h2>
+                <h2 class="question">In most games, I like to<span class="ellipsis">...</span></h2>
+                <h2 class="question">I want a game that<span class="ellipsis">...</span></h2>
+                <h2 class="question">My favorite games are<span class="ellipsis">...</span></h2>
             </div>
-            <div class="answers">
-                <p class="answer answer-a question-two-answer-a" onclick="q2s1aa()">Fight</p>
-                <p class="answer answer-b question-two-answer-b" onclick="q2s1ab()">Explore</p>
-            </div>
-        </div>
-        <div class="question-slide question-slide-two question-slide-two-b translate-right-100vw">
-            <div class="question">
-                <h1>In most games, I like to<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-two-answer-a" onclick="q2s2aa()">Fight</p>
-                <p class="answer answer-b question-two-answer-b" onclick="q2s2ab()">Explore</p>
-            </div>
-        </div>
 
-        <!-- question slides THREE -->
-        <div class="question-slide question-slide-three question-slide-three-a translate-left-100vw">
-            <div class="question">
-                <h1>I want a game that<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-three-answer-a" onclick="q3s1aa()">Doesn't take itself too seriously</p>
-                <p class="answer answer-b question-three-answer-b" onclick="q3s1ab()">Lets me lose myself in the world</p>
-            </div>
-        </div>
-        <div class="question-slide question-slide-three question-slide-three-b translate-right-100vw">
-            <div class="question">
-                <h1>In most games, I like to<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-three-answer-a" onclick="q3s2aa()">Doesn't take itself too seriously</p>
-                <p class="answer answer-b question-three-answer-b" onclick="q3s2ab()">Lets me lose myself in the world</p>
-            </div>
-        </div>
-
-        <!-- question slides FOUR -->
-        <div class="question-slide question-slide-four question-slide-four-a translate-left-100vw">
-            <div class="question">
-                <h1>My favorite games are<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-four-answer-a"><a href="index2.html">Are modern and constantly impressive</a></p>
-                <p class="answer answer-b question-four-answer-b"><a href="index2.html">Are old-school and set the standard for games today</a></p>
-            </div>
-        </div>
-        <div class="question-slide question-slide-four question-slide-four-b translate-right-100vw">
-            <div class="question">
-                <h1>My favorite games are<span class="ellipsis">...</span></h1>
-            </div>
-            <div class="answers">
-                <p class="answer answer-a question-four-answer-a"><a href="index2.html">Are modern and constantly impressive</a></p>
-                <p class="answer answer-b question-four-answer-b"><a href="index2.html">Are old-school and set the standard for games today</a></p>
+            <!-- answers -->
+            <div class="answer-container">
+                <div class="answers question-zero-answers">
+                    <p class="answer answer-a question-one-answer-a">Make me a custom list</p>
+                    <p class="answer answer-b question-one-answer-b">Browse a generic list</p>
+                </div>
+                <div class="answers question-one-answers">
+                    <p class="answer answer-a question-two-answer-a">Tell a good story</p>
+                    <p class="answer answer-b question-two-answer-b">Challenge me</p>
+                </div>
+                <div class="answers question-two-answers">
+                    <p class="answer answer-a question-three-answer-a">Fight</p>
+                    <p class="answer answer-b question-three-answer-b">Explore</p>
+                </div>
+                <div class="answers question-three-answers">
+                    <p class="answer answer-a question-four-answer-a">Doesn't take itself too seriously</p>
+                    <p class="answer answer-b question-four-answer-b">Lets me lose myself in the world</p>
+                </div>
+                <div class="answers question-four-answers">
+                    <p class="answer answer-a question-five-answer-a">Modern</p>
+                    <p class="answer answer-b question-five-answer-b">Old-school</p>
+                </div>
             </div>
         </div>
     </div>
+
 </body>
 
 </html>
