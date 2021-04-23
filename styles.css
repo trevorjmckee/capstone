@@ -33,7 +33,6 @@ body {
     background-repeat: no-repeat;
 
     z-index: 1;
-    /* THIS IS THE THING THAT I TURNED FROM 1 TO 0 TO ALLOW TO HOVER OVER THE QUESTION MARK!!!! */
 
     transition: all .6s ease-in-out;
 }
@@ -342,8 +341,6 @@ body {
 }
 
 .part-two-container {
-    /* display: flex; */
-    /* flex-flow: row nowrap; */
     display: block;
     width: 100vw;
     height: 100vh;
@@ -396,24 +393,49 @@ h1 {
 }
 
 .tag-story {
-    background-color: #2F44FF;
+    background-image: linear-gradient(to bottom, #3d4ddf, #4000ff);
 }
 
 .tag-challenge {
-
+    background-image: linear-gradient(to bottom, #FF8514, #df9e3d);
 }
 
 .tag-fight {
-    background-color: #DC0000;
+    background-image: linear-gradient(to bottom, #ff5900, #df3d3d);
 }
 
 .tag-explore {
+    background-image: linear-gradient(to bottom, #00BBB0, #00E067);
+}
 
+.tag-playful {
+    background-image: linear-gradient(to bottom, #ffd900, #c5af31);
+}
+
+.tag-immersive {
+    background-image: linear-gradient(to bottom, #AD0FC7, #FF004D);
+}
+
+.tag-classic {
+    background-image: linear-gradient(to bottom, #8f31c5, #cb0bb5);
+}
+
+.tag-modern {
+    background-image: linear-gradient(to bottom, #14c8ff, #006cd1);
 }
 
 .project-description p {
     font-size: 1.3rem;
     margin-bottom: 15px;
+}
+
+.retake-survey {
+    position: relative;
+    top: 15px;
+    font-size: .8rem;
+    text-decoration: underline;
+
+    margin-left: 20px;
 }
 
 .about-container {
@@ -424,9 +446,6 @@ h1 {
     left: 0;
     background-color: black;
     opacity: 0;
-    /* z-index: 10000; */
-
-    /* padding: 50px; */
 
     transition: all .3s ease-in-out;
 }
@@ -454,9 +473,6 @@ h1 {
 
 .list-container {
     background-color: rgb(20,20,20);
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
 
     width: 20%;
     min-width: 480px;
@@ -470,13 +486,10 @@ h1 {
 
     top: 50%;
     transform: translateY(-50%);
-    /* border: 1px white solid; */
     margin: auto;
     padding: 80px;
 
     width: 100%;
-    /* width: 20%;
-    min-width: 480px; */
 }
 
 .nav-list a {
@@ -484,7 +497,6 @@ h1 {
 }
 
 .nav-list a li {
-    /* color: rgb(220, 220, 220); */
     cursor: pointer;
 }
 
@@ -558,7 +570,6 @@ h1 {
     position: relative;
     height: 100vh;
     width: 100%;
-    /* max-width: 1300px; */
     padding: 50px 100px;
     overflow: scroll;
 

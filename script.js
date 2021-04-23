@@ -1,7 +1,3 @@
-// function wait() {
-//     setTimeout(() => {console.log("1 second has passed"); }, 3000);
-// }
-
 function transitionStarter() {
     // text
     let elemOne = document.getElementsByClassName("question");
@@ -30,6 +26,7 @@ function makeLineActive() {
 }
 
 var i = 0;
+var code = "";
 
 function answerA() {
     if (i == 0) {
@@ -38,34 +35,75 @@ function answerA() {
     } else if (i == 1) {
         answerTwo();
         i++;
+        code += "1";
     } else if (i == 2) {
         answerThree();
         i++;
+        code += "1";
     } else if (i == 3) {
         answerFour();
         i++;
+        code += "1";
     } else if (i == 4) {
-        window.location.href = "index2.html";
-        answerFive();
+        code += "1";
+        navigateToIndex();
     }
 }
 
 function answerB() {
     if (i == 0) {
-        answerOne();
-        i++;
+        window.location.href = "generic.html";
     } else if (i == 1) {
         answerTwo();
         i++;
+        code += "2";
     } else if (i == 2) {
         answerThree();
         i++;
+        code += "2";
     } else if (i == 3) {
         answerFour();
         i++;
+        code += "2";
     } else if (i == 4) {
-        window.location.href = "index2.html";
-        answerFive();
+        code += "2";
+        navigateToIndex();
+    }
+}
+
+function navigateToIndex() {
+    if (code == "1111") {
+        window.location.href = "story-fight-playful-classic.html";
+    } else if (code == "1112") {
+        window.location.href = "story-fight-playful-modern.html";
+    } else if (code == "1121") {
+        window.location.href = "story-fight-immersive-classic.html";
+    } else if (code == "1211") {
+        window.location.href = "story-explore-playful-classic.html";
+    } else if (code == "2111") {
+        window.location.href = "challenge-fight-playful-classic.html";
+    } else if (code == "1122") {
+        window.location.href = "story-fight-immersive-modern.html";
+    } else if (code == "1221") {
+        window.location.href = "story-explore-immersive-classic.html";
+    } else if (code == "2211") {
+        window.location.href = "challenge-explore-playful-classic.html";
+    } else if (code == "2112") {
+        window.location.href = "challenge-fight-playful-modern.html";
+    } else if (code == "1212") {
+        window.location.href = "story-explore-playful-modern.html";
+    } else if (code == "2121") {
+        window.location.href = "challenge-fight-immersive-classic.html";
+    } else if (code == "1222") {
+        window.location.href = "story-explore-immersive-modern.html";
+    } else if (code == "2122") {
+        window.location.href = "challenge-fight-immersive-modern.html";
+    } else if (code == "2212") {
+        window.location.href = "challenge-explore-playful-modern.html";
+    } else if (code == "2221") {
+        window.location.href = "challenge-explore-immersive-classic.html";
+    } else {
+        window.location.href = "challenge-explore-immersive-modern.html";
     }
 }
 
@@ -247,95 +285,9 @@ function showAboutContainer() {
 }
 
 function pressNavMain() {
-    // if (isNavOpen) {
-        elemOne = document.getElementsByClassName("nav");
-        elemOne[0].classList.toggle("nav-transition");
+    elemOne = document.getElementsByClassName("nav");
+    elemOne[0].classList.toggle("nav-transition");
 
-        elemTwo = document.getElementsByClassName("game-container");
-        elemTwo[0].classList.toggle("game-container-transition");
-
-    //     isNavOpen = false;
-
-    //     if (!isNavOneOn) {
-    //         fadeNavTwo();
-    //         setTimeout(() => switchDisplays(), 1300);
-    //         setTimeout(() => fadeNavOne(), 1500);
-    //         isNavOneOn = true;
-    //     }
-    // } else {
-    //     elemOne = document.getElementsByClassName("nav");
-    //     elemOne[0].classList.toggle("nav-transition");
-
-    //     elemTwo = document.getElementsByClassName("game-container");
-    //     elemTwo[0].classList.toggle("game-container-transition");
-
-    //     isNavOpen = true;
-    // }
+    elemTwo = document.getElementsByClassName("game-container");
+    elemTwo[0].classList.toggle("game-container-transition");
 }
-
-// function pressNavToggle() {
-//     // if nav is open, toggle nav type
-//     if (isNavOpen) {
-//         // if type one is on, turn off and turn on type two
-//         if (isNavOneOn) {
-//             fadeNavOne();
-//             setTimeout(() => switchDisplays(), 1000);
-//             setTimeout(() => fadeNavTwo(), 1200);
-//             isNavOneOn = false;
-//         } else { // if type two is on, turn off and turn on type one
-//             fadeNavTwo();
-//             setTimeout(() => switchDisplays(), 1300);
-//             setTimeout(() => fadeNavOne(), 1500);
-//             isNavOneOn = true;
-//         }
-//     } else { // if nav is not open, open it and set to nav-type-two
-//         elemOne = document.getElementsByClassName("nav");
-//         elemOne[0].classList.toggle("nav-transition");
-
-//         elemTwo = document.getElementsByClassName("game-container");
-//         elemTwo[0].classList.toggle("game-container-transition");
-
-//         isNavOpen = true;
-
-//         fadeNavOne();
-//         setTimeout(() => switchDisplays(), 1000);
-//         setTimeout(() => fadeNavTwo(), 1200);
-//         isNavOneOn = false;
-//     }
-// }
-
-// function fadeNavOne() {
-//     let elemOne = document.getElementsByClassName("nav-top-entry");
-//     elemOne[0].classList.toggle("nav-top-entry-transition");
-
-//     let elemTwo = document.getElementsByClassName("nav-bottom-entry");
-//     elemTwo[0].classList.toggle("nav-bottom-entry-transition");
-
-//     let elemThree = document.getElementsByClassName("nav-game");
-//     elemThree[0].classList.toggle("nav-game-transition");
-// }
-
-// function switchDisplays() {
-//     let elemOne = document.getElementsByClassName("nav-type-one");
-//     elemOne[0].classList.toggle("display-none");
-
-//     let elemTwo = document.getElementsByClassName("nav-type-two");
-//     elemTwo[0].classList.toggle("display-none");
-// }
-
-// function fadeNavTwo() {
-//     let elemOne = document.getElementsByClassName("nav-type-two-line");
-//     elemOne[0].classList.toggle("nav-type-two-line-transition");
-
-//     let elemTwo = document.getElementsByClassName("nav-list");
-//     elemTwo[0].classList.toggle("nav-list-transition");
-//     setTimeout(function () { elemTwo[1].classList.toggle("nav-list-transition"); }, 300);
-
-//     let elemThree = document.getElementsByClassName("li-0-container");
-//     elemThree[0].classList.toggle("li-0-container-transition");
-
-    // let elemTwo = document.getElementsByClassName("list-item");
-    // for (i = 0; i < elemTwo.length; i++) {
-    //     setTimeout(function() {elemTwo[i].classList.toggle("list-item-transition"); }, i*100);
-    // }
-// }
