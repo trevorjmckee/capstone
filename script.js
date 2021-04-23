@@ -218,9 +218,34 @@ function answerFourShow() {
 }
 
 let isNavOneOn = true;
+let isAboutOpen = false;
 let isNavOpen = true;
 
 // INDEX NAVIGATION !!!
+function openAboutSection() {
+    elemOne = document.getElementsByClassName("about-container");
+
+    if (isAboutOpen) {
+        elemOne[0].classList.toggle("about-container-show");
+        setTimeout(() => hideAbout(), 300);
+        isAboutOpen = false;
+    } else {
+        hideAbout();
+        isAboutOpen = true;
+        setTimeout(() => showAboutContainer(), 100);
+    }
+}
+
+function hideAbout() {
+    elemOne = document.getElementsByClassName("about-container");
+    elemOne[0].classList.toggle("about-container-display-none");
+}
+
+function showAboutContainer() {
+    elemOne = document.getElementsByClassName("about-container");
+    elemOne[0].classList.toggle("about-container-show");
+}
+
 function pressNavMain() {
     // if (isNavOpen) {
         elemOne = document.getElementsByClassName("nav");

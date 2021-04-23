@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>capstone</title>
+    <title>Metroidvania Index | Your Index</title>
 
     <!-- stylesheet -->
     <link href="styles.css" rel="stylesheet" type="text/css" />
@@ -17,6 +17,12 @@
 </head>
 
 <body>
+    <div class="screen-too-small-container">
+        <div class="screen-too-small-content">
+            <p class="uh-oh">Uh oh!</p>
+            <p class="not-yet-optimized">This website isn't yet optimized for small screens. Visit us on a larger screen instead.</p>
+        </div>
+    </div>
     <div class="part-two-container">
         <nav class="nav">
             <div class="project-description">
@@ -29,6 +35,17 @@
                         <span class="tag-answer tag-story">Story</span><span class="tag-answer tag-fight">Fight</span>
                     </div>
                     <p>On the right is <i>your</i> custom list of games based on <i>your</i> gaming preferences. Click on one of the games to navigate directly to it or use the arrow on the right to explore your list from top to bottom.</p>
+                    <p style="font-size: .8rem; margin-top: 30px; text-decoration: underline; cursor: pointer;" onclick="openAboutSection()">About this project</p>
+                    <div class="about-container about-container-display-none">
+                        <div class="about-content-container">
+                            <div class="thank-you">Thank you</div>
+                            <p>To <i>Jonathan Hanahan</i>. Your support, dedication, and care have made me a better designer. And to <i>friends and family</i>. I couldn't have made it through this project without you.</p>
+                            <hr style="margin: 50px 0">
+                            <p>This project was made by Trevor McKee in the Spring of 2021 to complete their BFA in Communication Design at the Sam Fox School of Design & Visual Arts.</p>
+                            <p>Typefaces are <a href="https://fonts.adobe.com/fonts/aglet-mono" target="_blank">Aglet-Mono</a> by Jesse Ragan at XYZ Type and <a href="https://fonts.adobe.com/fonts/mono45-headline" target="_blank">Mono45 Headline</a> by Fabian Leuenberger at EuropaType.</p>
+                            <p style="font-size: .8rem; margin-top: 30px; text-decoration: underline; cursor: pointer;" onclick="openAboutSection()">Close</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="list-container">
